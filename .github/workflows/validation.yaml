@@ -43,7 +43,7 @@ jobs:
 
       - name: Render template
         id: render
-        uses: chuhlomin/render-template@v1.6
+        uses: chuhlomin/render-template@v1.7
         with:
           template: .github/workflows/templates/validation-repository-not-found.md
           vars: |
@@ -211,7 +211,7 @@ jobs:
 
       - name: Render template
         id: render
-        uses: chuhlomin/render-template@v1.6
+        uses: chuhlomin/render-template@v1.7
         with:
           template: .github/workflows/templates/validation-succeeded.md
           vars: |
@@ -249,7 +249,7 @@ jobs:
 
       - name: Render template
         id: render
-        uses: chuhlomin/render-template@v1.6
+        uses: chuhlomin/render-template@v1.7
         with:
           template: .github/workflows/templates/validation-failed.md
           vars: |
@@ -290,7 +290,7 @@ jobs:
 
       - name: Render template
         id: render
-        uses: chuhlomin/render-template@v1.6
+        uses: chuhlomin/render-template@v1.7
         with:
           template: .github/workflows/templates/validation-errored.md
           vars: |

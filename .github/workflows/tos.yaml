@@ -62,7 +62,7 @@ jobs:
 
       - name: Render template
         id: render
-        uses: chuhlomin/render-template@v1.6
+        uses: chuhlomin/render-template@v1.7
         with:
           template: .github/workflows/templates/tos-not-accepted.md
           vars: |
@@ -93,7 +93,7 @@ jobs:
 
       - name: Render template
         id: render
-        uses: chuhlomin/render-template@v1.6
+        uses: chuhlomin/render-template@v1.7
         with:
           template: .github/workflows/templates/tos-accepted.md
           vars: |
@@ -124,7 +124,7 @@ jobs:
 
       - name: Render template when tos are not found
         id: render
-        uses: chuhlomin/render-template@v1.6
+        uses: chuhlomin/render-template@v1.7
         with:
           template: .github/workflows/templates/tos-not-found.md
 
