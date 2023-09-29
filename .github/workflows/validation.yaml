@@ -107,7 +107,7 @@ jobs:
           curl https://prod-docker-desktop.s3.amazonaws.com/mac/main/amd64/appcast.xml -o appcast.xml
 
       - name: Get Docker Desktop latest build url
-        uses: mavrosxristoforos/get-xml-info@1.1.1
+        uses: mavrosxristoforos/get-xml-info@1.2.0
         id: get-build-url
         with:
           xml-file: appcast.xml
