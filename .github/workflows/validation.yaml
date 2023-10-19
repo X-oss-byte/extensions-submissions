@@ -39,7 +39,7 @@ jobs:
     needs: parse-issue
     if: failure()
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Render template
         id: render
@@ -66,7 +66,7 @@ jobs:
     outputs:
       validation_output: ${{ steps.set-output.outputs.validation_output }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - id: set-output
         run: |
           delimiter="$(openssl rand -hex 8)"
@@ -207,7 +207,7 @@ jobs:
     needs: [parse-issue, noop-validate, validate]
     if: always() && (needs.validate.result == 'success' || needs.noop-validate.result == 'success')
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Render template
         id: render
@@ -245,7 +245,7 @@ jobs:
       (needs.validate.result == 'failure' && needs.validate.outputs.validation_output != '') ||
       (needs.noop-validate.result == 'failure' && needs.noop-validate.outputs.validation_output != '')
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Render template
         id: render
@@ -286,7 +286,7 @@ jobs:
       (needs.validate.result == 'failure' && needs.validate.outputs.validation_output == '') ||
       (needs.noop-validate.result == 'failure' && needs.noop-validate.outputs.validation_output == '')
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Render template
         id: render
