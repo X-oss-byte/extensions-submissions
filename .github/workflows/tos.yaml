@@ -58,7 +58,7 @@ jobs:
     needs: [ parse-issue ]
     if: needs.parse-issue.outputs.accepted == 'false'
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Render template
         id: render
@@ -89,7 +89,7 @@ jobs:
     needs: [ parse-issue ]
     if: needs.parse-issue.outputs.accepted == 'true' && !contains(github.event.issue.labels.*.name, 'tos/accepted')
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Render template
         id: render
@@ -120,7 +120,7 @@ jobs:
     needs: [ parse-issue ]
     if: failure() && needs.parse-issue.outputs.accepted == 'null'
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Render template when tos are not found
         id: render
