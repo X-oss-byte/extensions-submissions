@@ -34,7 +34,7 @@ jobs:
 
       - name: Parse issue body
         id: parse
-        uses: zentered/issue-forms-body-parser@v1.5.1
+        uses: zentered/issue-forms-body-parser@v2.2.0
 
       - name: Find TOS checkbox state
         id: set-output
