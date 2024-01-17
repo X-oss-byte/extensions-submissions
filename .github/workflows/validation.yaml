@@ -121,7 +121,7 @@ jobs:
 
       - name: Get Docker app cache
         id: cache-docker-desktop-app
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         env:
           cache-name: cache-docker-desktop-app
         with:
@@ -130,7 +130,7 @@ jobs:
 
       - name: Get Docker install settings cache
         id: cache-docker-desktop-install-settings
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         env:
           cache-name: cache-docker-desktop-install-settings
         with:
