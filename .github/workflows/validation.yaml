@@ -51,7 +51,7 @@ jobs:
 
       - name: Add comment
         if: env.ACT == false # do not comment when running with act
-        uses: peter-evans/create-or-update-comment@v2
+        uses: peter-evans/create-or-update-comment@v4
         with:
           issue-number: ${{ github.event.issue.number }}
           body: ${{ steps.render.outputs.result }}
@@ -220,7 +220,7 @@ jobs:
 
       - name: Add Comment
         if: env.ACT == false
-        uses: peter-evans/create-or-update-comment@v2
+        uses: peter-evans/create-or-update-comment@v4
         with:
           issue-number: ${{ github.event.issue.number }}
           body: ${{ steps.render.outputs.result }}
@@ -258,7 +258,7 @@ jobs:
 
       - name: Add comment
         if: env.ACT == false
-        uses: peter-evans/create-or-update-comment@v2
+        uses: peter-evans/create-or-update-comment@v4
         with:
           issue-number: ${{ github.event.issue.number }}
           body: ${{ steps.render.outputs.result }}
@@ -298,7 +298,7 @@ jobs:
 
       - name: Add comment
         if: env.ACT == false
-        uses: peter-evans/create-or-update-comment@v2
+        uses: peter-evans/create-or-update-comment@v4
         with:
           issue-number: ${{ github.event.issue.number }}
           body: ${{ steps.render.outputs.result }}
